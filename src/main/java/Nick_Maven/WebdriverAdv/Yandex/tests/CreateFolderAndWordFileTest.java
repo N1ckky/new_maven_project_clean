@@ -1,17 +1,17 @@
 package Nick_Maven.WebdriverAdv.Yandex.tests;
 
+import Nick_Maven.WebdriverAdv.Yandex.model.User;
 import Nick_Maven.WebdriverAdv.Yandex.pages.NavigationBlockPage;
 import Nick_Maven.WebdriverAdv.Yandex.pages.WordEditorPage;
 import Nick_Maven.WebdriverAdv.Yandex.pages.YandexDiskFilesPage;
 import Nick_Maven.WebdriverAdv.Yandex.pages.YandexDiskLoginPage;
-import Nick_Maven.WebdriverAdv.Yandex.model.User;
 import Nick_Maven.WebdriverAdv.Yandex.service.BrowserParamsService;
 import Nick_Maven.WebdriverAdv.Yandex.service.DriverService;
 import Nick_Maven.WebdriverAdv.Yandex.service.UserCreator;
 import Nick_Maven.WebdriverAdv.Yandex.service.WordOnlineService;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import static Nick_Maven.WebdriverAdv.Yandex.service.YandexDiscService.checkFolderName;
 
@@ -47,8 +47,10 @@ public class CreateFolderAndWordFileTest extends CommonConditions{
                 .getAllOppenedTabs()
                 .switchTab(2);
 
-        Assert.assertTrue(checkFolderName());
-        Assert.assertTrue(WordOnlineService.checkTextInTheWordDocument);
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(checkFolderName());
+        softAssert.assertTrue(WordOnlineService.checkTextInTheWordDocument);
+        softAssert.assertAll();
     }
 
     @AfterMethod(alwaysRun = true)

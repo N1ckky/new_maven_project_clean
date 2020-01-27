@@ -18,5 +18,4 @@ public class CommonConditions {
     public void driverSetup() {
         driver = DriverService.getDriver();
     }
-
 }
