@@ -7,9 +7,9 @@ import Nick_Maven.WebdriverAdv.Yandex.service.DriverService;
 import Nick_Maven.WebdriverAdv.Yandex.service.UserCreator;
 import Nick_Maven.WebdriverAdv.Yandex.service.YandexDiscService;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class GarbageTest {
     private WebDriver driver;
@@ -26,17 +26,19 @@ public class GarbageTest {
                 .selectWordFile()
                 .deleteWordFile()
                 ;
-        Assert.assertFalse(YandexDiscService.checkFileNotInFilesFolder());
+        SoftAssert softAssert=new SoftAssert();
+        softAssert.assertFalse(YandexDiscService.checkFileNotInFilesFolder());
 
         garbageDiskTest
                 .checkGarbageBlock();
 
-        Assert.assertTrue(YandexDiscService.checkFileIsInGarbage());
+        softAssert.assertTrue(YandexDiscService.checkFileIsInGarbage());
 
         filesPage
                 .clearGarbage()
         ;
-        Assert.assertFalse(YandexDiscService.checkFileNotInGarbage());
+        softAssert.assertFalse(YandexDiscService.checkFileNotInGarbage());
+        softAssert.assertAll();
     }
 
     @AfterMethod(alwaysRun = true)

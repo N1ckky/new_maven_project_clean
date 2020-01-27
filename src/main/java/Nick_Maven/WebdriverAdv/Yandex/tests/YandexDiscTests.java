@@ -19,7 +19,7 @@ public class YandexDiscTests extends CommonConditions {
                 .userLogin(UserCreator.withCredentialsFromProperty());
     }
 
-    @Test(priority = 2, description = "Yandex disk navigation block test")
+    @Test(dependsOnMethods = {"yandexDiscSmokeTest"}, description = "Yandex disk navigation block test")
     public void yandexDiskNavigationBlockTest() {
         NavigationBlockPage navBlock = new NavigationBlockPage()
                 .checkLastFilesBlock()
@@ -34,7 +34,7 @@ public class YandexDiscTests extends CommonConditions {
         Assert.assertTrue(titlesComparisonInNavBlock());
     }
 
-    @Test(priority = 3, description = "Creation folder test")
+    @Test(dependsOnMethods = {"yandexDiscSmokeTest", "yandexDiskNavigationBlockTest"}, description = "Creation folder test")
     public void yandexDiscCreateFolderTest() {
         NavigationBlockPage newFolderTest = new NavigationBlockPage()
                 .checkFilesBlock();
@@ -47,7 +47,7 @@ public class YandexDiscTests extends CommonConditions {
         Assert.assertTrue(checkFolderName());
     }
 
-    @Test(priority = 3, description = "Creation Word file test")
+    @Test(dependsOnMethods = {"yandexDiscSmokeTest", "yandexDiskNavigationBlockTest"}, description = "Creation Word file test")
     public void yandexDiskCreateFolderAndWordFileTest() {
         NavigationBlockPage newFolderTest = new NavigationBlockPage()
                 .checkFilesBlock();
@@ -68,7 +68,7 @@ public class YandexDiscTests extends CommonConditions {
         browserParamsService
                 .switchTab(0);
 
-        SoftAssert softAssert=new SoftAssert();
+        SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(YandexDiscService.checkIsWordFileExist());
 
         filesPage
@@ -79,10 +79,11 @@ public class YandexDiscTests extends CommonConditions {
                 .switchTab(2);
 
         softAssert.assertTrue(WordOnlineService.checkTextInWordEditor());
+        browserParamsService.switchTab(0);
         softAssert.assertAll();
     }
 
-    @Test(priority = 4, description = "Yandex disc garbage test")
+    @Test(dependsOnMethods = {"yandexDiscSmokeTest", "yandexDiskNavigationBlockTest"}, description = "Yandex disc garbage test")
     public void yandexDisсGarbageTest() {
         new BrowserParamsService()
                 .getAllOppenedTabs()
@@ -94,7 +95,7 @@ public class YandexDiscTests extends CommonConditions {
                 .openCreatedFolder()
                 .selectWordFile()
                 .deleteWordFile();
-        SoftAssert softAssert=new SoftAssert();
+        SoftAssert softAssert = new SoftAssert();
         softAssert.assertFalse(YandexDiscService.checkFileNotInFilesFolder());
 
         filesBlock
