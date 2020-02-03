@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console">
+            <PatternLayout>
+                <Pattern>%d %p %c{2} [%t] %l %m%n</Pattern>
+            </PatternLayout>
+        </Console>
+        <File name="File" fileName="target/logs/cloudGoogle_framework.log">
+            <PatternLayout>
+                <Pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%t] %p (%F) %c{2} - %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <RollingFile name="HTML" fileName="target/logs/cloudGoogle_framework.html"
+                     filePattern="target/logs/cloudGoogle_framework-%d{yyyy-MM-dd}.html">
+            <HTMLLayout charset="UTF-8" title="my HTML log" locationInfo="true" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+            <AppenderRef ref="HTML"/>
+        </Root>
+        <!--<Logger name="separateLogger" level="debug" additivity="false">-->
+            <!--<appender-ref ref="HTML" level="debug" />-->
+        <!--</Logger>-->
+    </Loggers>
+</Configuration>

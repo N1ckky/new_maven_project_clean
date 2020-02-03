@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HardcoreFrameworkTest" verbose="1" >
+    <test name="HardcoreSmokeTest"   >
+        <classes>
+            <class name="Nick_Maven.Framework.test.Smoke" />
+        </classes>
+    </test>
+</suite>
