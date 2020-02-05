@@ -1,11 +1,11 @@
 package Nick_Maven.Framework.service;
 
 import Nick_Maven.Framework.model.ParamsCloudGoogleCalculator;
+import Nick_Maven.Framework.model.ParamsCloudGoogleCalculatorFactory;
 
 import static Nick_Maven.Framework.test.CommonConditions.tempList;
 
 public class ListEstimateCheckService {
-    public static boolean listEstimateCheckFlag = false;
     public static String myVmClass;
     public static String myInstance;
     public static String myRegion;
@@ -13,16 +13,14 @@ public class ListEstimateCheckService {
     public static String myCommitmentTerm;
     public static String myPrice;
 
-    private static void listEstimateCheck() {
-        ParamsCloudGoogleCalculator paramsCloudGoogleCalculator = ExpectedParamsCreatorService.withParamsFromProperty();
-        if (myVmClass.equals(paramsCloudGoogleCalculator.getVmClass())
+    public static boolean listEstimateCheck() {
+        ParamsCloudGoogleCalculator paramsCloudGoogleCalculator = ParamsCloudGoogleCalculatorFactory.fromPropertyParamsCloudGoogleCalculator();
+        return (myVmClass.equals(paramsCloudGoogleCalculator.getVmClass())
                 && myInstance.equals(paramsCloudGoogleCalculator.getInstance())
                 && myRegion.equals(paramsCloudGoogleCalculator.getRegion())
                 && mySSD.equals(paramsCloudGoogleCalculator.getLocalSsd())
                 && myCommitmentTerm.equals(paramsCloudGoogleCalculator.getCommitmentTerm())
-                && myPrice.equals(paramsCloudGoogleCalculator.getTotalPrice())) {
-            listEstimateCheckFlag = true;
-        }
+                && myPrice.equals(paramsCloudGoogleCalculator.getTotalPrice()));
     }
 
     public static void addConcatedTotalPriceToTempList(String totalPrice) {
@@ -63,10 +61,5 @@ public class ListEstimateCheckService {
         myCommitmentTerm = commitmentTerm
                 .substring(commitmentTerm.indexOf(':') + 2);
         return myCommitmentTerm;
-    }
-
-    public static boolean startListEstimateCheck(){
-        listEstimateCheck();
-        return listEstimateCheckFlag;
     }
 }

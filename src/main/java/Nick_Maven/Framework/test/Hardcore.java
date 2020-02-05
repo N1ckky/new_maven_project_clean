@@ -44,8 +44,8 @@ public class Hardcore extends CommonConditions {
         cloudGooglePricingCalculatorTest
                 .waitListEstimateField();
 
-        softAssert.assertTrue(startListEstimateCheck());
-        logger.debug("Check condition for ALL PARAMETRS from waitListEstimateField IS " + listEstimateCheckFlag) ;
+        softAssert.assertTrue(listEstimateCheck());
+        logger.debug("Check condition for ALL PARAMETRS from waitListEstimateField IS " + listEstimateCheck()) ;
 
         cloudGooglePricingCalculatorTest
                 .clickButtonEmailEstimate();

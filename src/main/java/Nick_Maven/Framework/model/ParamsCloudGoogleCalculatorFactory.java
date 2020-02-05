@@ -1,8 +1,8 @@
-package Nick_Maven.Framework.service;
+package Nick_Maven.Framework.model;
 
-import Nick_Maven.Framework.model.ParamsCloudGoogleCalculator;
+import Nick_Maven.Framework.service.TestDataReaderService;
 
-public class ExpectedParamsCreatorService {
+public class ParamsCloudGoogleCalculatorFactory {
 
     private static final String EXPECTED_VM_CLASS = "testdata.ExpectedVM_CLASS";
     private static final String EXPECTED_INSTANCE = "testdata.ExpectedINSTANCE";
@@ -11,7 +11,7 @@ public class ExpectedParamsCreatorService {
     private static final String EXPECTED_COMMITMENT_TERM = "testdata.ExpectedCOMMITMENT_TERM";
     private static final String EXPECTED_TOTAL_PRICE = "testdata.ExpectedTOTAL_PRICE";
 
-    public static ParamsCloudGoogleCalculator withParamsFromProperty() {
+    public static ParamsCloudGoogleCalculator fromPropertyParamsCloudGoogleCalculator() {
         return new ParamsCloudGoogleCalculator(TestDataReaderService.getTestData(EXPECTED_VM_CLASS),
                 TestDataReaderService.getTestData(EXPECTED_INSTANCE), TestDataReaderService.getTestData(EXPECTED_REGION),
                 TestDataReaderService.getTestData(EXPECTED_LOCAL_SSD), TestDataReaderService.getTestData(EXPECTED_COMMITMENT_TERM),
