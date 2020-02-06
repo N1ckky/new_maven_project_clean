@@ -1,0 +1,1 @@
+mvn -Dbrowser=chrome -Denvironment=dev -Dsurefire.suiteXmlFiles=src\main\resources\testng-all.xml clean test
