@@ -1,0 +1,54 @@
+[2020-02-15 22:11:12] [main] |DEBUG| (Log.java) myLogger - Webdriver opening url:https://disk.yandex.by/
+[2020-02-15 22:11:14] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793873738screenshot.jpg
+[2020-02-15 22:11:14] [main] |DEBUG| (Log.java) myLogger - Click By.xpath: //*[contains(@class,'button_login')]
+[2020-02-15 22:11:14] [main] |DEBUG| (Log.java) myLogger - Waiting for element to be clickable By.xpath: //*[contains(@class,'button_login')]
+[2020-02-15 22:11:14] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793874304screenshot.jpg
+[2020-02-15 22:11:16] [main] |DEBUG| (Log.java) myLogger - Type nickTestQA in text fieldBy.xpath: //*[@id='passp-field-login']
+[2020-02-15 22:11:16] [main] |DEBUG| (Log.java) myLogger - Waiting for visibility of element By.xpath: //*[@id='passp-field-login']
+[2020-02-15 22:11:17] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793876099screenshot.jpg
+[2020-02-15 22:11:18] [main] |DEBUG| (Log.java) myLogger - Click By.xpath: //*[(contains(@class,'passp-button passp-sign-in-button'))]
+[2020-02-15 22:11:18] [main] |DEBUG| (Log.java) myLogger - Waiting for element to be clickable By.xpath: //*[(contains(@class,'passp-button passp-sign-in-button'))]
+[2020-02-15 22:11:19] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793878108screenshot.jpg
+[2020-02-15 22:11:19] [main] |DEBUG| (Log.java) myLogger - Type mytestpassword in text fieldBy.xpath: //*[@id='passp-field-passwd']
+[2020-02-15 22:11:19] [main] |DEBUG| (Log.java) myLogger - Waiting for visibility of element By.xpath: //*[@id='passp-field-passwd']
+[2020-02-15 22:11:22] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793880691screenshot.jpg
+[2020-02-15 22:11:22] [main] |DEBUG| (Log.java) myLogger - Click By.xpath: //*[(contains(@class,'button2_type_submit'))]
+[2020-02-15 22:11:22] [main] |DEBUG| (Log.java) myLogger - Waiting for element to be clickable By.xpath: //*[(contains(@class,'button2_type_submit'))]
+[2020-02-15 22:11:24] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793882630screenshot.jpg
+[2020-02-15 22:11:24] [main] |INFO | (Log.java) myLogger - Successful log in
+[2020-02-15 22:11:55] [main] |DEBUG| (Log.java) myLogger - Webdriver opening url:https://disk.yandex.by/
+[2020-02-15 22:11:57] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793916936screenshot.jpg
+[2020-02-15 22:11:57] [main] |DEBUG| (Log.java) myLogger - Click By.xpath: //*[contains(@class,'button_login')]
+[2020-02-15 22:11:57] [main] |DEBUG| (Log.java) myLogger - Waiting for element to be clickable By.xpath: //*[contains(@class,'button_login')]
+[2020-02-15 22:11:57] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793917478screenshot.jpg
+[2020-02-15 22:11:59] [main] |DEBUG| (Log.java) myLogger - Type nickTestQA in text fieldBy.xpath: //*[@id='passp-field-login']
+[2020-02-15 22:11:59] [main] |DEBUG| (Log.java) myLogger - Waiting for visibility of element By.xpath: //*[@id='passp-field-login']
+[2020-02-15 22:12:00] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793919301screenshot.jpg
+[2020-02-15 22:12:01] [main] |DEBUG| (Log.java) myLogger - Click By.xpath: //*[(contains(@class,'passp-button passp-sign-in-button'))]
+[2020-02-15 22:12:01] [main] |DEBUG| (Log.java) myLogger - Waiting for element to be clickable By.xpath: //*[(contains(@class,'passp-button passp-sign-in-button'))]
+[2020-02-15 22:12:02] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793921089screenshot.jpg
+[2020-02-15 22:12:02] [main] |DEBUG| (Log.java) myLogger - Type mytestpassword in text fieldBy.xpath: //*[@id='passp-field-passwd']
+[2020-02-15 22:12:02] [main] |DEBUG| (Log.java) myLogger - Waiting for visibility of element By.xpath: //*[@id='passp-field-passwd']
+[2020-02-15 22:12:05] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793923499screenshot.jpg
+[2020-02-15 22:12:05] [main] |DEBUG| (Log.java) myLogger - Click By.xpath: //*[(contains(@class,'button2_type_submit'))]
+[2020-02-15 22:12:05] [main] |DEBUG| (Log.java) myLogger - Waiting for element to be clickable By.xpath: //*[(contains(@class,'button2_type_submit'))]
+[2020-02-15 22:12:07] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581793925538screenshot.jpg
+[2020-02-15 22:12:07] [main] |INFO | (Log.java) myLogger - Successful log in
+[2020-02-15 22:16:46] [main] |DEBUG| (Log.java) myLogger - Webdriver opening url:https://disk.yandex.by/
+[2020-02-15 22:16:48] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581794207950screenshot.jpg
+[2020-02-15 22:16:48] [main] |DEBUG| (Log.java) myLogger - Click By.xpath: //*[contains(@class,'button_login')]
+[2020-02-15 22:16:48] [main] |DEBUG| (Log.java) myLogger - Waiting for element to be clickable By.xpath: //*[contains(@class,'button_login')]
+[2020-02-15 22:16:48] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581794208506screenshot.jpg
+[2020-02-15 22:16:50] [main] |DEBUG| (Log.java) myLogger - Type nickTestQA in text fieldBy.xpath: //*[@id='passp-field-login']
+[2020-02-15 22:16:50] [main] |DEBUG| (Log.java) myLogger - Waiting for visibility of element By.xpath: //*[@id='passp-field-login']
+[2020-02-15 22:16:51] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581794210482screenshot.jpg
+[2020-02-15 22:16:52] [main] |DEBUG| (Log.java) myLogger - Click By.xpath: //*[(contains(@class,'passp-button passp-sign-in-button'))]
+[2020-02-15 22:16:52] [main] |DEBUG| (Log.java) myLogger - Waiting for element to be clickable By.xpath: //*[(contains(@class,'passp-button passp-sign-in-button'))]
+[2020-02-15 22:16:53] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581794212158screenshot.jpg
+[2020-02-15 22:16:53] [main] |DEBUG| (Log.java) myLogger - Type mytestpassword in text fieldBy.xpath: //*[@id='passp-field-passwd']
+[2020-02-15 22:16:53] [main] |DEBUG| (Log.java) myLogger - Waiting for visibility of element By.xpath: //*[@id='passp-field-passwd']
+[2020-02-15 22:16:56] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581794214527screenshot.jpg
+[2020-02-15 22:16:56] [main] |DEBUG| (Log.java) myLogger - Click By.xpath: //*[(contains(@class,'button2_type_submit'))]
+[2020-02-15 22:16:56] [main] |DEBUG| (Log.java) myLogger - Waiting for element to be clickable By.xpath: //*[(contains(@class,'button2_type_submit'))]
+[2020-02-15 22:16:58] [main] |INFO | (Log.java) myLogger - Taken screenshot C:\Programming\Projects\LogAndReportTools\logs\1581794216274screenshot.jpg
+[2020-02-15 22:16:58] [main] |INFO | (Log.java) myLogger - Successful log in

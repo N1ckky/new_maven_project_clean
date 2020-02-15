@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="YandexDisk" verbose="1" >
+    <test name="GarbageTest"   >
+        <classes>
+            <class name="test.java.YandexDiskTests.GarbageTest" />
+        </classes>
+    </test>
+</suite>
