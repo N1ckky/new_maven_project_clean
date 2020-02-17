@@ -7,13 +7,14 @@ import main.java.yandex.product.disk.Configs;
 
 import static main.java.Framework.ui.Browser.getInstance;
 import static main.java.yandex.product.disk.service.RandomStringGenerator.randomStringGenerator;
+import static main.java.yandex.product.disk.service.YandexDiscService.isFileInCurrentFolder;
 
 public class YandexDiskFilesPage extends AbstractPage {
     private Actions actions;
-    public static String folderName;
-    public static String realFolderName;
+    private static String folderName;
+    private static String realFolderName;
     private static final String WORD_FILE_NAME = Configs.WORD_FILE_NAME;
-    public static String FILE_LOCATOR_PATTERN = String.format("//*[@class='clamped-text' and contains(text(),'%s')]", WORD_FILE_NAME);
+    private static String FILE_LOCATOR_PATTERN = String.format("//*[@class='clamped-text' and contains(text(),'%s')]", WORD_FILE_NAME);
 
     private static final By SCREEN_FIELD_LOCATOR = By.xpath("//*[contains(@class,'root__content-inner_page_listing')]");
     private static final By NEW_FOLDER_FIELD_LOCATOR = By.xpath("//*[contains(@class,'context-menu-create-popup__item_new-folder')]");
@@ -101,5 +102,38 @@ public class YandexDiskFilesPage extends AbstractPage {
         getInstance().waitUntilDocumentIsReady();
         driver.navigate().refresh();
         return new YandexDiskFilesPage();
+    }
+
+    public static boolean isWordFileExist() {
+        getInstance().refreshBrowser();
+        By searchWordFileLocator = By.xpath(FILE_LOCATOR_PATTERN);
+        Log.info("Is the Word file exist: " + getInstance().isVisible(searchWordFileLocator));
+        return getInstance().isVisible(searchWordFileLocator);
+    }
+
+    public static boolean checkFolderName() {
+        Log.info("Created and opened folders are the same: " + folderName.equals(realFolderName));
+        return folderName.equals(realFolderName);
+    }
+
+    public static boolean isFileNotInFilesFolder() {
+        getInstance().waitReadyState();
+        By searchWordFileLocator = By.xpath(FILE_LOCATOR_PATTERN);
+        return isFileInCurrentFolder(searchWordFileLocator, "FILES");
+    }
+
+    public static boolean isFileInGarbage() {
+        By searchWordFileLocator = By.xpath(FILE_LOCATOR_PATTERN);
+        getInstance().waitForVisibilityOfElement(searchWordFileLocator);
+        return isFileInCurrentFolder(searchWordFileLocator, "GARBAGE");
+    }
+
+    public static boolean isFileNotInGarbage() {
+        getInstance().waitReadyState();
+        By searchWordFileLocator = By.xpath(FILE_LOCATOR_PATTERN);
+        if (getInstance().isVisible(searchWordFileLocator)){
+            return false;
+        }
+        return isFileInCurrentFolder(searchWordFileLocator, "GARBAGE");
     }
 }

@@ -6,7 +6,6 @@ import main.java.yandex.product.disk.pages.NavigationBlockPage;
 import main.java.yandex.product.disk.pages.YandexDiskFilesPage;
 import main.java.yandex.product.disk.pages.YandexDiskLoginPage;
 import main.java.Framework.bo.UserCreator;
-import main.java.yandex.product.disk.service.YandexDiscService;
 
 public class CreateFolderTest extends CommonConditions {
     @Test(description = "Creation folder test")
@@ -21,6 +20,6 @@ public class CreateFolderTest extends CommonConditions {
                 .openCreatedFolder()
                 ;
 
-        Assert.assertTrue(YandexDiscService.checkFolderName());
+        Assert.assertTrue(YandexDiskFilesPage.checkFolderName());
     }
 }

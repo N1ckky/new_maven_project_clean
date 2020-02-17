@@ -10,11 +10,9 @@ import main.java.yandex.product.disk.pages.YandexDiskFilesPage;
 import main.java.yandex.product.disk.pages.YandexDiskLoginPage;
 import main.java.yandex.product.disk.service.BrowserParamsService;
 import main.java.Framework.bo.UserCreator;
-import main.java.yandex.product.disk.service.WordOnlineService;
-import main.java.yandex.product.disk.service.YandexDiscService;
 
+import static main.java.yandex.product.disk.pages.YandexDiskFilesPage.checkFolderName;
 import static main.java.yandex.product.disk.service.NavigationBlockService.titlesComparisonInNavBlock;
-import static main.java.yandex.product.disk.service.YandexDiscService.checkFolderName;
 
 public class YandexDiskTests extends CommonConditions {
 
@@ -74,7 +72,7 @@ public class YandexDiskTests extends CommonConditions {
                 .switchTab(0);
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(YandexDiscService.checkIsWordFileExist());
+        softAssert.assertTrue(YandexDiskFilesPage.isWordFileExist());
 
         filesPage
                 .checkWordFile();
@@ -83,7 +81,7 @@ public class YandexDiskTests extends CommonConditions {
                 .getAllOppenedTabs()
                 .switchTab(2);
 
-        softAssert.assertTrue(WordOnlineService.checkTextInWordEditor());
+        softAssert.assertTrue(wordEditorPage.getTextFromWordEditor());
         browserParamsService.switchTab(0);
         softAssert.assertAll();
     }
@@ -101,17 +99,17 @@ public class YandexDiskTests extends CommonConditions {
                 .selectWordFile()
                 .deleteWordFile();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertFalse(YandexDiscService.checkFileNotInFilesFolder());
+        softAssert.assertFalse(YandexDiskFilesPage.isFileNotInFilesFolder());
 
         filesBlock
                 .checkGarbageBlock();
 
-        softAssert.assertTrue(YandexDiscService.checkFileIsInGarbage());
+        softAssert.assertTrue(YandexDiskFilesPage.isFileInGarbage());
 
         filesPage
                 .clearGarbage()
         ;
-        softAssert.assertFalse(YandexDiscService.checkFileNotInGarbage());
+        softAssert.assertFalse(YandexDiskFilesPage.isFileNotInGarbage());
         softAssert.assertAll();
     }
 }

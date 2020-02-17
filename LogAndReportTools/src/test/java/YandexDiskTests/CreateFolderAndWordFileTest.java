@@ -10,8 +10,7 @@ import main.java.yandex.product.disk.pages.YandexDiskFilesPage;
 import main.java.yandex.product.disk.pages.YandexDiskLoginPage;
 import main.java.yandex.product.disk.service.BrowserParamsService;
 
-import static main.java.yandex.product.disk.service.WordOnlineService.checkTextInWordEditor;
-import static main.java.yandex.product.disk.service.YandexDiscService.checkFolderName;
+import static main.java.yandex.product.disk.pages.YandexDiskFilesPage.checkFolderName;
 
 public class CreateFolderAndWordFileTest extends CommonConditions {
 
@@ -47,7 +46,7 @@ public class CreateFolderAndWordFileTest extends CommonConditions {
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(checkFolderName());
-        softAssert.assertTrue(checkTextInWordEditor());
+        softAssert.assertTrue(wordEditorPage.getTextFromWordEditor());
         softAssert.assertAll();
     }
 }

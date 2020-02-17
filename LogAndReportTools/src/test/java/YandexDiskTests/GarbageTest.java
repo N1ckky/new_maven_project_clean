@@ -6,7 +6,6 @@ import main.java.yandex.product.disk.pages.NavigationBlockPage;
 import main.java.yandex.product.disk.pages.YandexDiskFilesPage;
 import main.java.yandex.product.disk.pages.YandexDiskLoginPage;
 import main.java.Framework.bo.UserCreator;
-import main.java.yandex.product.disk.service.YandexDiscService;
 
 public class GarbageTest extends CommonConditions {
 
@@ -22,17 +21,17 @@ public class GarbageTest extends CommonConditions {
                 .deleteWordFile()
                 ;
         SoftAssert softAssert=new SoftAssert();
-        softAssert.assertFalse(YandexDiscService.checkFileNotInFilesFolder());
+        softAssert.assertFalse(YandexDiskFilesPage.isFileNotInFilesFolder());
 
         garbageDiskTest
                 .checkGarbageBlock();
 
-        softAssert.assertTrue(YandexDiscService.checkFileIsInGarbage());
+        softAssert.assertTrue(YandexDiskFilesPage.isFileInGarbage());
 
         filesPage
                 .clearGarbage()
         ;
-        softAssert.assertFalse(YandexDiscService.checkFileNotInGarbage());
+        softAssert.assertFalse(YandexDiskFilesPage.isFileNotInGarbage());
         softAssert.assertAll();
     }
 }

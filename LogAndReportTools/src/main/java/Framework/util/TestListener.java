@@ -34,19 +34,19 @@ public class TestListener implements ITestListener {
     }
 
     public void onTestSkipped(ITestResult iTestResult) {
-
+        logger.trace("Test skiped");
     }
 
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-
+        logger.trace("Test failed, but with succes percentage");
     }
 
     public void onStart(ITestContext iTestContext) {
-
+        logger.trace("Started");
     }
 
     public void onFinish(ITestContext iTestContext) {
-
+        logger.trace("Finished");
     }
 
     private void saveScreenshot(){

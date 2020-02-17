@@ -100,6 +100,15 @@ public final class Browser implements WrapsDriver {
         return element.getText();
     }
 
+    public static String getValue(WebElement element) {
+        try {
+            return (String) ((JavascriptExecutor) getInstance().getWrappedDriver()).
+                    executeScript("return arguments[0].textContent;", element);
+        } catch (Exception e) {
+            return "can't get text";
+        }
+    }
+
     public String getAttribute(By by, String attribute) {
         Log.debug("Getting attribute " + attribute + "from element " + by);
         return waitForVisibilityOfElement(by).getAttribute(attribute);
