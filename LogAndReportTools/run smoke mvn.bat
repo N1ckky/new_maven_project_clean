@@ -1,0 +1,1 @@
+mvn src\main\resources\testng-smoke.xml
