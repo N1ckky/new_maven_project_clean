@@ -2,10 +2,8 @@ package main.java.Framework.ui;
 
 import main.java.Framework.CustomConditions;
 import main.java.Framework.logger.Log;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.IOException;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import static main.java.yandex.product.disk.Configs.WAIT_TIMEOUT_SECONDS;
 
@@ -23,10 +20,7 @@ public final class Browser implements WrapsDriver {
     private WebDriver wrappedWebDriver;
 
     private Browser() {
-        WebDriverManager.chromedriver().setup();
-        wrappedWebDriver = new ChromeDriver();
-        wrappedWebDriver.manage().timeouts().implicitlyWait(WAIT_TIMEOUT_SECONDS, TimeUnit.SECONDS);
-        wrappedWebDriver.manage().window().maximize();
+        wrappedWebDriver = BrowserFactory.getBrowser();
     }
 
     public static synchronized Browser getInstance() {
