@@ -11,8 +11,8 @@ import main.java.yandex.product.disk.pages.YandexDiskLoginPage;
 import main.java.yandex.product.disk.service.BrowserParamsService;
 import main.java.Framework.bo.UserCreator;
 
-import static main.java.yandex.product.disk.pages.YandexDiskFilesPage.checkFolderName;
 import static main.java.yandex.product.disk.service.NavigationBlockService.titlesComparisonInNavBlock;
+import static main.java.yandex.product.disk.pages.YandexDiskFilesPage.checkFolderName;
 
 public class YandexDiskTests extends CommonConditions {
 
@@ -37,7 +37,7 @@ public class YandexDiskTests extends CommonConditions {
         Assert.assertTrue(titlesComparisonInNavBlock());
     }
 
-    @Test(dependsOnMethods = {"yandexDiskNavigationBlockTest"}, description = "Creation folder test")
+    @Test(description = "Creation folder test")
     public void yandexDiscCreateFolderTest() {
         NavigationBlockPage newFolderTest = new NavigationBlockPage()
                 .checkFilesBlock();
@@ -50,7 +50,7 @@ public class YandexDiskTests extends CommonConditions {
         Assert.assertTrue(checkFolderName());
     }
 
-    @Test(dependsOnMethods = {"yandexDiscCreateFolderTest"}, description = "Creation Word file test")
+    @Test(description = "Creation Word file test")
     public void yandexDiskCreateFolderAndWordFileTest() {
         NavigationBlockPage newFolderTest = new NavigationBlockPage()
                 .checkFilesBlock();
@@ -86,7 +86,7 @@ public class YandexDiskTests extends CommonConditions {
         softAssert.assertAll();
     }
 
-    @Test(dependsOnMethods = {"yandexDiskCreateFolderAndWordFileTest"}, description = "Yandex disc garbage test")
+    @Test(description = "Yandex disc garbage test")
     public void yandexDisсGarbageTest() {
         new BrowserParamsService()
                 .getAllOppenedTabs()

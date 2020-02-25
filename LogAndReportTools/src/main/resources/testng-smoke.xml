@@ -6,7 +6,7 @@
     </listeners>
     <test name="SmokeTest"   >
         <classes>
-            <class name="test.java.YandexDiskTests.SmokeTest" />
+            <class name="test.java.YandexDiskTests.SmokeTest"/>
         </classes>
     </test>
 </suite>
