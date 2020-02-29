@@ -18,14 +18,34 @@ public class YandexDiskLoginPage extends AbstractPage {
     }
 
     public NavigationBlockPage userLogin(User user) {
-        getInstance().get(HOMEPAGE_URL);
-        getInstance().click(LOGIN_BUTTON_LOCATOR);
-        getInstance().type(LOGIN_INPUT_FIELD_LOCATOR,user.getUserLogin());
-        getInstance().click(PASSWORD_BUTTON_LOCATOR);
-        getInstance().type(PASSWORD_INPUT_FIELD_LOCATOR, user.getUserPassword());
-        getInstance().click(SUBMIT_BUTTON_LOCATOR);
+        open().typeLogin(user).typePassowrd(user).clickSubmitButton();
         Log.info("Successful log in");
 
         return new NavigationBlockPage();
+    }
+
+    public YandexDiskLoginPage open() {
+        getInstance().get(HOMEPAGE_URL);
+        getInstance().click(LOGIN_BUTTON_LOCATOR);
+        Log.info("Open login page");
+        return this;
+    }
+
+    public YandexDiskLoginPage typeLogin(User user) {
+        getInstance().type(LOGIN_INPUT_FIELD_LOCATOR,user.getUserLogin());
+        getInstance().click(PASSWORD_BUTTON_LOCATOR);
+        Log.info("Type login");
+        return this;
+    }
+
+    public YandexDiskLoginPage typePassowrd(User user) {
+        getInstance().type(PASSWORD_INPUT_FIELD_LOCATOR, user.getUserPassword());
+        Log.info("Type password");
+        return this;
+    }
+    public YandexDiskLoginPage clickSubmitButton() {
+        getInstance().click(SUBMIT_BUTTON_LOCATOR);
+        Log.info("Click submit button");
+        return this;
     }
 }
