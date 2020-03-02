@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Junit YandexDisk" verbose="1" >
+    <listeners>
+        <listener class-name = "main.java.Framework.util.TestListener" />
+    </listeners>
+    <test name="Yandex Disk tests via Junit"   >
+        <classes>
+            <class name="main.java.Framework.runner.CucumberJunitRunner"/>
+        </classes>
+    </test>
+</suite>

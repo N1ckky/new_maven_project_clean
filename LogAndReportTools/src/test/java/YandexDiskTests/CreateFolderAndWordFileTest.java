@@ -45,8 +45,9 @@ public class CreateFolderAndWordFileTest extends CommonConditions {
                 .switchTab(2);
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(checkFolderName());
-        softAssert.assertTrue(wordEditorPage.getTextFromWordEditor());
+        softAssert.assertTrue(checkFolderName(),"Folder name wrong");
+        softAssert.assertTrue(wordEditorPage.getTextFromWordEditor(),
+                "Text, received from word editor, is not as expected");
         softAssert.assertAll();
     }
 }
