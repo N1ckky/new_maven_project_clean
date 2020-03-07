@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="YandexDisk all tests suite" verbose="1" >
+    <test name="Yandex disk all tests" verbose="1">
+        <classes>
+            <class name="test.java.weather.AllDaysTogetherTest"/>
+        </classes>
+    </test>
+</suite>

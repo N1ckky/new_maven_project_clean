@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[[2020-03-07 19:09:12] REPORT [main] |INFO | (Log.java) myLogger - Total rain days in 2017: 52
+</br>]]>
+    </line>
+    <line>
+      <![CDATA[[2020-03-07 19:09:28] REPORT [main] |INFO | (Log.java) myLogger - Total rain Thursdays: 21.0
+</br>]]>
+    </line>
+    <line>
+      <![CDATA[[2020-03-07 19:09:28] REPORT [main] |INFO | (Log.java) myLogger - -----------
+</br>]]>
+    </line>
+    <line>
+      <![CDATA[[2020-03-07 19:09:28] REPORT [main] |INFO | (Log.java) myLogger - Rain Thursday size: 21
+</br>]]>
+    </line>
+    <line>
+      <![CDATA[[2020-03-07 19:09:28] REPORT [main] |INFO | (Log.java) myLogger - Rain Friday size: 21
+</br>]]>
+    </line>
+    <line>
+      <![CDATA[[2020-03-07 19:09:34] REPORT [main] |INFO | (Log.java) myLogger - Total raining days 21.0
+</br>]]>
+    </line>
+    <line>
+      <![CDATA[[2020-03-07 19:09:34] REPORT [main] |INFO | (Log.java) myLogger - Days when currency grow up 11.0
+</br>]]>
+    </line>
+    <line>
+      <![CDATA[[2020-03-07 19:09:34] REPORT [main] |INFO | (Log.java) myLogger - -----------
+</br>]]>
+    </line>
+    <line>
+      <![CDATA[[2020-03-07 19:09:34] REPORT [main] |INFO | (Log.java) myLogger - Percentage 52.38%
+</br>]]>
+    </line>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="22107" started-at="2020-03-07T19:09:12 MSK" finished-at="2020-03-07T19:09:34 MSK">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="22107" started-at="2020-03-07T19:09:12 MSK" finished-at="2020-03-07T19:09:34 MSK">
+      <class name="test.java.weather.AllDaysTogetherTest">
+        <test-method status="PASS" signature="checkWeather()[pri:0, instance:test.java.weather.AllDaysTogetherTest@3bfdc050]" name="checkWeather" duration-ms="22072" started-at="2020-03-07T19:09:12 MSK" finished-at="2020-03-07T19:09:34 MSK">
+          <reporter-output>
+            <line>
+              <![CDATA[[2020-03-07 19:09:12] REPORT [main] |INFO | (Log.java) myLogger - Total rain days in 2017: 52
+</br>]]>
+            </line>
+            <line>
+              <![CDATA[[2020-03-07 19:09:28] REPORT [main] |INFO | (Log.java) myLogger - Total rain Thursdays: 21.0
+</br>]]>
+            </line>
+            <line>
+              <![CDATA[[2020-03-07 19:09:28] REPORT [main] |INFO | (Log.java) myLogger - -----------
+</br>]]>
+            </line>
+            <line>
+              <![CDATA[[2020-03-07 19:09:28] REPORT [main] |INFO | (Log.java) myLogger - Rain Thursday size: 21
+</br>]]>
+            </line>
+            <line>
+              <![CDATA[[2020-03-07 19:09:28] REPORT [main] |INFO | (Log.java) myLogger - Rain Friday size: 21
+</br>]]>
+            </line>
+            <line>
+              <![CDATA[[2020-03-07 19:09:34] REPORT [main] |INFO | (Log.java) myLogger - Total raining days 21.0
+</br>]]>
+            </line>
+            <line>
+              <![CDATA[[2020-03-07 19:09:34] REPORT [main] |INFO | (Log.java) myLogger - Days when currency grow up 11.0
+</br>]]>
+            </line>
+            <line>
+              <![CDATA[[2020-03-07 19:09:34] REPORT [main] |INFO | (Log.java) myLogger - -----------
+</br>]]>
+            </line>
+            <line>
+              <![CDATA[[2020-03-07 19:09:34] REPORT [main] |INFO | (Log.java) myLogger - Percentage 52.38%
+</br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- checkWeather -->
+      </class> <!-- test.java.weather.AllDaysTogetherTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

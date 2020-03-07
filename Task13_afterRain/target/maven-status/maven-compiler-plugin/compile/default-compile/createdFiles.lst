@@ -1,0 +1,11 @@
+main\java\weather\bo\Currency.class
+test\java\weather\AllDaysTogetherTest.class
+main\java\weather\logger\Log.class
+main\java\weather\runner\Parameters.class
+main\java\weather\customAppender\CustomAppender.class
+main\java\weather\services\Constants.class
+main\java\weather\services\CurrencyApiService.class
+main\java\weather\services\WeatherApiService.class
+main\java\weather\runner\SuiteFactory.class
+main\java\weather\runner\TestsRunner.class
+main\java\weather\util\TestListener.class

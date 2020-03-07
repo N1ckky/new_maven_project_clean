@@ -1,0 +1,9 @@
+[2020-03-07 19:09:12] [main] |INFO | (Log.java) myLogger - Total rain days in 2017: 52
+[2020-03-07 19:09:28] [main] |INFO | (Log.java) myLogger - Total rain Thursdays: 21.0
+[2020-03-07 19:09:28] [main] |INFO | (Log.java) myLogger - -----------
+[2020-03-07 19:09:28] [main] |INFO | (Log.java) myLogger - Rain Thursday size: 21
+[2020-03-07 19:09:28] [main] |INFO | (Log.java) myLogger - Rain Friday size: 21
+[2020-03-07 19:09:34] [main] |INFO | (Log.java) myLogger - Total raining days 21.0
+[2020-03-07 19:09:34] [main] |INFO | (Log.java) myLogger - Days when currency grow up 11.0
+[2020-03-07 19:09:34] [main] |INFO | (Log.java) myLogger - -----------
+[2020-03-07 19:09:34] [main] |INFO | (Log.java) myLogger - Percentage 52.38%
