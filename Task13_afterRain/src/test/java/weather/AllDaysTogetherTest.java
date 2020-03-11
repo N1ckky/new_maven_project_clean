@@ -1,9 +1,9 @@
 package test.java.weather;
 
-import static main.java.weather.services.CurrencyApiService.checkCurrencyRate;
-import static main.java.weather.services.CurrencyApiService.percentageCurrencyGrowUp;
+import static main.java.weather.service.CurrencyApiService.checkCurrencyRate;
+import static main.java.weather.service.CurrencyApiService.percentageCurrencyGrowUp;
 
-import main.java.weather.services.WeatherApiService;
+import main.java.weather.service.WeatherApiService;
 import main.java.weather.util.TestListener;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;

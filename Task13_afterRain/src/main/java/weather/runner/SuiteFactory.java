@@ -4,7 +4,6 @@ import org.testng.TestNG;
 
 import java.util.Collections;
 
-
 public class SuiteFactory {
     private SuiteFactory() {
 
