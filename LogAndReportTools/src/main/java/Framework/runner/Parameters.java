@@ -20,17 +20,17 @@ public final class Parameters {
     @Parameter(names = {"--smoke_suite", "-smk"}, description = "Smoke test suite")
     private String smokeSuite = "./src/main/resources/testng-smoke.xml";
 
-    @Parameter(names = {"--all_suite", "-all"}, description = "All test suite")
-    private String allSuite = "./src/main/resources/testng-all.xml";
-
-    @Parameter(names = {"--parallelClasses_suite", "-pc"}, description = "All test suite in parallel classes")
-    private String parallelClassesSuite = "./src/main/resources/testng-parallel_classes.xml";
-
-    @Parameter(names = {"--parallelTests_suite", "-pt"}, description = "All test suite in parallel test")
-    private String parallelTestsSuite = "./src/main/resources/testng-parallel_tests.xml";
-
     @Parameter(names = {"--properties", "-prop"}, description = "Log4j properties location")
     private String properties = "./src/main/resources/log4j.properties";
+
+    @Parameter(names = {"--grid", "-grid"}, description = "Use selenium grid?", converter = GridConverter.class)
+    private GridType grid = GridType.FALSE;
+
+    @Parameter(names = {"--host", "-host"}, description = "Selenium grid host")
+    private String host = "localhost";
+
+    @Parameter(names = {"--port", "-port"}, description = "Select node port")
+    private String port = "4444";
 
     private Parameters() {
     }
@@ -54,10 +54,6 @@ public final class Parameters {
         return suiteType;
     }
 
-    public String getAllSuite() {
-        return allSuite;
-    }
-
     public String getSmokeSuite() {
         return smokeSuite;
     }
@@ -66,12 +62,16 @@ public final class Parameters {
         return properties;
     }
 
-    public String getParallelClassesSuite() {
-        return parallelClassesSuite;
+    public GridType getGrid() {
+        return grid;
     }
 
-    public String getParallelTestsSuiteSuite() {
-        return parallelTestsSuite;
+    public String getHost() {
+        return host;
+    }
+
+    public String getPort() {
+        return port;
     }
 
     public static class SuiteTypeConverter implements IStringConverter<SuiteType> {
@@ -83,6 +83,12 @@ public final class Parameters {
     public static class BrowserTypeConverter implements IStringConverter<BrowserType> {
         public BrowserType convert(String s) {
             return BrowserType.valueOf(s.toUpperCase());
+        }
+    }
+
+    public static class GridConverter implements IStringConverter<GridType>{
+        public GridType convert(String s) {
+            return GridType.valueOf(s.toUpperCase());
         }
     }
 }

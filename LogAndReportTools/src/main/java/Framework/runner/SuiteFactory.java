@@ -15,15 +15,6 @@ public class SuiteFactory {
             case SMOKE:
                 testNG.setTestSuites(Collections.singletonList(Parameters.instance().getSmokeSuite()));
                 break;
-            case ALL:
-                testNG.setTestSuites(Collections.singletonList(Parameters.instance().getAllSuite()));
-                break;
-            case PARALLEL_CLASSES:
-                testNG.setTestSuites(Collections.singletonList(Parameters.instance().getParallelClassesSuite()));
-                break;
-            case PARALLEL_TESTS:
-                testNG.setTestSuites(Collections.singletonList(Parameters.instance().getParallelTestsSuiteSuite()));
-                break;
             default:
                 testNG.setTestSuites(Collections.singletonList(Parameters.instance().getSmokeSuite()));
                 break;
