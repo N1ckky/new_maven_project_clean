@@ -1,11 +1,9 @@
 package main.java.Framework.ui;
 
-import main.java.Framework.runner.Parameters;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class OptionsManager {
 
